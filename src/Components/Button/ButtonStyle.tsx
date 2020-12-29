@@ -14,5 +14,6 @@ export default StyleSheet.create({
     fontSize: 16,
     color: '#fff',
     textAlign: 'center',
+    fontFamily: 'WorkSans',
   },
 });

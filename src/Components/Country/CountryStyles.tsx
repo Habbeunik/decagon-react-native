@@ -23,11 +23,12 @@ export default StyleSheet.create({
   title: {
     fontSize: 18,
     color: '#585858',
-    fontWeight: 'bold',
+    fontFamily: 'WorkSansBold',
   },
   caption: {
     fontSize: 14,
     color: '#909090',
+    fontFamily: 'WorkSans',
   },
   convertAmountWrapper: {
     position: 'absolute',
@@ -36,7 +37,7 @@ export default StyleSheet.create({
   },
   convertAmount: {
     fontSize: 19,
-    fontWeight: 'bold',
     color: '#585858',
+    fontFamily: 'WorkSansBold',
   },
 });

@@ -5,7 +5,9 @@ export default StyleSheet.create({
     fontSize: 17,
     borderWidth: 1,
     borderColor: '#ccc',
-    padding: 15,
+    paddingHorizontal: 25,
+    paddingVertical: 15,
     borderRadius: 30,
+    fontFamily: 'WorkSans',
   },
 });

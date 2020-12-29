@@ -2,12 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   headline: {
-    fontWeight: 'bold',
     color: '#585858',
     fontSize: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#F2f2f2',
     paddingBottom: 10,
+    fontFamily: 'WorkSansBold',
   },
   emptyContainer: {
     width: '100%',
@@ -17,10 +17,13 @@ export default StyleSheet.create({
   },
   emptyText: {
     fontSize: 18,
+    fontFamily: 'WorkSans',
   },
   back: {
     marginBottom: 20,
     fontSize: 18,
+    fontFamily: 'WorkSansBold',
+    color: '#585858',
   },
   converWrapper: {
     flexDirection: 'row',

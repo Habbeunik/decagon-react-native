@@ -96,7 +96,7 @@ const ResultScreen = ({ route, navigation }) => {
   return (
     <View style={screenStyles.screen}>
       <TouchableOpacity onPress={handleBackClick}>
-        <Text style={resultStyles.back}>{'<- Back'}</Text>
+        <Text style={resultStyles.back}>{'< Back'}</Text>
       </TouchableOpacity>
       {isLoading && (
         <View style={{ flex: 1, marginTop: '30%' }}>

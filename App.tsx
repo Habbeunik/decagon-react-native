@@ -1,9 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView, Platform } from 'react-native';
+import { StyleSheet, SafeAreaView, Platform } from 'react-native';
+import { useFonts } from 'expo-font';
+
 import AppNavigation from './src/Navigation';
 
 export default function App() {
+  const [loaded] = useFonts({
+    WorkSans: require('./assets/fonts/WorkSans.ttf'),
+    WorkSansBold: require('./assets/fonts/WorkSans-SemiBold.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <AppNavigation />

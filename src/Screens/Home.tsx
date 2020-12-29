@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { mergeStyle } from '../Utils';
 
 import screenStyles from './Styles/ScreenStyles';
@@ -24,16 +24,18 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   return (
     <View style={mergeStyle(screenStyles.screen, homeStyles.home)}>
-      <Input
-        onChangeText={setSearchKey}
-        value={searchKey}
-        placeholder="Search For Country"
-      />
-      <Button
-        label="Search"
-        disabled={!searchKey}
-        onPress={handleButtonClick}
-      />
+      <Text style={homeStyles.headline}>Search</Text>
+      <Text style={homeStyles.caption}>
+        Find countries by keywords and check out the corresponding naira values
+      </Text>
+      <View style={homeStyles.inputWrapper}>
+        <Input
+          onChangeText={setSearchKey}
+          value={searchKey}
+          placeholder="Search For Country"
+        />
+      </View>
+      <Button label="Go" disabled={!searchKey} onPress={handleButtonClick} />
     </View>
   );
 };
