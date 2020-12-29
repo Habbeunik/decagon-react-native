@@ -1,13 +1,14 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../Theme';
 
 export default StyleSheet.create({
   headline: {
-    color: '#585858',
+    color: theme.colors.dark,
     fontSize: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#F2f2f2',
+    borderBottomColor: theme.colors.greyLightest,
     paddingBottom: 10,
-    fontFamily: 'WorkSansBold',
+    fontFamily: theme.font.bold,
   },
   emptyContainer: {
     width: '100%',
@@ -17,13 +18,13 @@ export default StyleSheet.create({
   },
   emptyText: {
     fontSize: 18,
-    fontFamily: 'WorkSans',
+    fontFamily: theme.font.normal,
   },
   back: {
     marginBottom: 20,
     fontSize: 18,
-    fontFamily: 'WorkSansBold',
-    color: '#585858',
+    fontFamily: theme.font.bold,
+    color: theme.colors.dark,
   },
   converWrapper: {
     flexDirection: 'row',

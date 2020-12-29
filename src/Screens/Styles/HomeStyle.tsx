@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../Theme';
 
 export default StyleSheet.create({
   home: {
@@ -9,14 +10,14 @@ export default StyleSheet.create({
     marginBottom: 15,
   },
   headline: {
-    fontFamily: 'WorkSansBold',
+    fontFamily: theme.font.bold,
     fontSize: 25,
-    color: '#585858',
+    color: theme.colors.dark,
     textAlign: 'center',
   },
   caption: {
-    fontFamily: 'WorkSans',
-    color: '#909090',
+    fontFamily: theme.font.normal,
+    color: theme.colors.greyLight,
     textAlign: 'center',
     fontSize: 14,
     lineHeight: 22,

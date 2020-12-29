@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../Theme';
 
 export default StyleSheet.create({
   wrapper: {
@@ -16,19 +17,19 @@ export default StyleSheet.create({
   },
   content: {
     borderBottomWidth: 1,
-    borderBottomColor: '#F2f2f2',
+    borderBottomColor: theme.colors.greyLightest,
     paddingBottom: 10,
     flex: 1,
   },
   title: {
     fontSize: 18,
-    color: '#585858',
-    fontFamily: 'WorkSansBold',
+    color: theme.colors.dark,
+    fontFamily: theme.font.bold,
   },
   caption: {
     fontSize: 14,
-    color: '#909090',
-    fontFamily: 'WorkSans',
+    color: theme.colors.greyLight,
+    fontFamily: theme.font.normal,
   },
   convertAmountWrapper: {
     position: 'absolute',
@@ -37,7 +38,7 @@ export default StyleSheet.create({
   },
   convertAmount: {
     fontSize: 19,
-    color: '#585858',
-    fontFamily: 'WorkSansBold',
+    color: theme.colors.dark,
+    fontFamily: theme.font.bold,
   },
 });

@@ -1,19 +1,20 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../Theme';
 
 export default StyleSheet.create({
   wrapper: {
     padding: 15,
     borderRadius: 30,
-    backgroundColor: '#00875a',
+    backgroundColor: theme.colors.primary,
     width: '100%',
   },
   disabled: {
-    backgroundColor: '#ccc',
+    backgroundColor: theme.colors.grey,
   },
   label: {
     fontSize: 16,
-    color: '#fff',
+    color: theme.colors.white,
     textAlign: 'center',
-    fontFamily: 'WorkSans',
+    fontFamily: theme.font.normal,
   },
 });
