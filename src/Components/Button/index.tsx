@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import { mergeStyle } from '../../Utils';
 
-import Styles from './Style';
+import Styles from './ButtonStyle';
 
 interface ButtonProps {
   label: string;

@@ -19,7 +19,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   const handleButtonClick = useCallback(() => {
     navigation.navigate('Result', { searchKey });
-  }, [navigation]);
+  }, [navigation, searchKey]);
 
   return (
     <View style={mergeStyle(screenStyles.screen, homeStyles.home)}>
