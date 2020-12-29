@@ -6,6 +6,7 @@ export default StyleSheet.create({
     marginTop: 15,
     width: '100%',
     alignItems: 'center',
+    position: 'relative',
   },
   logo: {
     width: 50,
@@ -27,5 +28,15 @@ export default StyleSheet.create({
   caption: {
     fontSize: 14,
     color: '#909090',
+  },
+  convertAmountWrapper: {
+    position: 'absolute',
+    top: '40%',
+    right: 25,
+  },
+  convertAmount: {
+    fontSize: 19,
+    fontWeight: 'bold',
+    color: '#585858',
   },
 });

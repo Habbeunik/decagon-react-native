@@ -1,11 +1,12 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View } from 'react-native';
 import { mergeStyle } from '../Utils';
 
 import screenStyles from './Styles/ScreenStyles';
 import homeStyles from './Styles/HomeStyle';
 import Button from '../Components/Button';
 import { StackNavigationProp } from '@react-navigation/stack';
+import Input from '../Components/Input';
 
 interface HomeScreenProps {
   navigation: StackNavigationProp<
@@ -23,11 +24,10 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   return (
     <View style={mergeStyle(screenStyles.screen, homeStyles.home)}>
-      <TextInput
-        style={homeStyles.searchInput}
-        placeholder="Search For Country"
-        value={searchKey}
+      <Input
         onChangeText={setSearchKey}
+        value={searchKey}
+        placeholder="Search For Country"
       />
       <Button
         label="Search"

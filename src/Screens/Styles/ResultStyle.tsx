@@ -22,4 +22,10 @@ export default StyleSheet.create({
     marginBottom: 20,
     fontSize: 18,
   },
+  converWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
 });
