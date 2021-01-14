@@ -4,7 +4,16 @@ import { SvgUri } from 'react-native-svg';
 
 import style from './CountryStyles';
 
-const Country = ({
+interface CountryProps {
+  name: string;
+  capital: string;
+  flag: string;
+  population: string;
+  currency: string;
+  currencySymbol: string;
+  amount: string | number;
+}
+const Country: React.FC<CountryProps> = ({
   name,
   capital,
   flag,

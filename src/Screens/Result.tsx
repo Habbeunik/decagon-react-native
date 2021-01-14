@@ -6,20 +6,25 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
+import { AppStackNavigationProp } from '../Navigation';
 
 import screenStyles from './Styles/ScreenStyles';
 import resultStyles from './Styles/ResultStyle';
 import Country from '../Components/Country';
 import Input from '../Components/Input';
 import Button from '../Components/Button';
+import CountryList from '../Components/Country/CountryList';
 
-const ResultScreen = ({ route, navigation }) => {
+const ResultScreen: React.FC<AppStackNavigationProp> = ({
+  route,
+  navigation,
+}) => {
   const { searchKey } = route.params;
 
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [amountInput, setAmountInput] = useState('');
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
 
   const handleAmountInputChange = useCallback(
     (value) => {
@@ -44,9 +49,8 @@ const ResultScreen = ({ route, navigation }) => {
     setIsLoading(true);
     fetch(`https://restcountries.eu/rest/v2/name/${searchKey}`)
       .then((res) => res.json())
-      .then((data) => {
+      .then((data: never[]) => {
         if (Array.isArray(data)) {
-          console.log('data', data);
           setCountries(data);
         }
       })
@@ -72,22 +76,6 @@ const ResultScreen = ({ route, navigation }) => {
       // .finally(() => setIsConverting(false));
     }
   }, [countries]);
-
-  const flastListKeyExtractor = useCallback(({ name }) => name, []);
-  const renderItem = useCallback(
-    ({ item }) => (
-      <Country
-        name={item.name}
-        capital={item.capital}
-        flag={item.flag}
-        population={item.population}
-        currency={item.currencies[0].code}
-        currencySymbol={item.currencies[0].symbol}
-        amount={amount}
-      />
-    ),
-    [amount]
-  );
 
   const handleBackClick = useCallback(() => {
     navigation.goBack();
@@ -125,12 +113,7 @@ const ResultScreen = ({ route, navigation }) => {
                   disabled={!amountInput || Number(amountInput) === amount}
                 />
               </View>
-              <Text style={resultStyles.headline}>Countries Found</Text>
-              <FlatList
-                data={countries}
-                keyExtractor={flastListKeyExtractor}
-                renderItem={renderItem}
-              />
+              <CountryList amount={amount} data={countries} />
             </Fragment>
           )}
         </Fragment>

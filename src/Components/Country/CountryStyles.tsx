@@ -41,4 +41,12 @@ export default StyleSheet.create({
     color: theme.colors.dark,
     fontFamily: theme.font.bold,
   },
+  headline: {
+    color: theme.colors.dark,
+    fontSize: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: theme.colors.greyLightest,
+    paddingBottom: 10,
+    fontFamily: theme.font.bold,
+  },
 });

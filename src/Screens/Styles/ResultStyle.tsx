@@ -2,14 +2,6 @@ import { StyleSheet } from 'react-native';
 import theme from '../../Theme';
 
 export default StyleSheet.create({
-  headline: {
-    color: theme.colors.dark,
-    fontSize: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: theme.colors.greyLightest,
-    paddingBottom: 10,
-    fontFamily: theme.font.bold,
-  },
   emptyContainer: {
     width: '100%',
     alignItems: 'center',

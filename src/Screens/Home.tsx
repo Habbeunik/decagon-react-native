@@ -5,17 +5,10 @@ import { mergeStyle } from '../Utils';
 import screenStyles from './Styles/ScreenStyles';
 import homeStyles from './Styles/HomeStyle';
 import Button from '../Components/Button';
-import { StackNavigationProp } from '@react-navigation/stack';
 import Input from '../Components/Input';
+import { AppStackNavigationProp } from '../Navigation';
 
-interface HomeScreenProps {
-  navigation: StackNavigationProp<
-    { Home: undefined; Result: { searchKey: string } },
-    'Home'
-  >;
-}
-
-const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
+const HomeScreen: React.FC<AppStackNavigationProp> = ({ navigation }) => {
   const [searchKey, setSearchKey] = useState('');
 
   const handleButtonClick = useCallback(() => {

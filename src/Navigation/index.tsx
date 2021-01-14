@@ -1,10 +1,22 @@
 import React from 'react';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer, RouteProp } from '@react-navigation/native';
+import {
+  createStackNavigator,
+  StackNavigationProp,
+} from '@react-navigation/stack';
 
 import HomeScreen from '../Screens/Home';
 import ResultScreen from '../Screens/Result';
+
+type ParamList = {
+  Home: undefined;
+  Result: { searchKey: string };
+};
+export interface AppStackNavigationProp {
+  navigation: StackNavigationProp<ParamList, 'Home'>;
+  route: RouteProp<ParamList, 'Result'>;
+}
 
 const Stack = createStackNavigator();
 
